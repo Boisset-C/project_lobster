@@ -4,12 +4,17 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
-function SignInForm() {
+function LoginForm() {
   return (
     <Container>
       <Row>
         <Col>
-          <Form>
+          <h1>Login Form</h1>
+        </Col>
+      </Row>
+      <Row>
+        <Col sm={8}>
+          <Form className="loginFormContainer">
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
@@ -35,4 +40,4 @@ function SignInForm() {
   );
 }
 
-export default SignInForm;
+export default LoginForm;
