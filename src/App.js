@@ -20,7 +20,7 @@ function App() {
         </Col>
       </Row>
       <Row>
-        <Col sm={6}>
+        <Col>
           <Profile />
         </Col>
       </Row>

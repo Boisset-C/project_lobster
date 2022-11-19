@@ -1,10 +1,22 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import { useState } from "react";
 
 function RegisterForm() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const onRegister = async (event) => {
+    event.preventDefault(); // Prevent default submission
+    try {
+      console.log(email);
+      console.log(password);
+    } catch (e) {
+      alert(`Registration failed! ${e.message}`);
+    }
+  };
+
   return (
     <Container>
       <Row>
@@ -14,26 +26,40 @@ function RegisterForm() {
       </Row>
       <Row>
         <Col sm={8}>
-          <Form className="loginFormContainer">
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
-              <Form.Text className="text-muted">
+          <form>
+            <div className="form-group">
+              <label>Email address</label>
+              <input
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                placeholder="Enter email"
+              />
+              <small id="emailHelp" className="form-text text-muted">
                 We'll never share your email with anyone else.
-              </Form.Text>
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Check me out" />
-            </Form.Group>
-            <Button variant="primary" type="submit">
+              </small>
+            </div>
+            <div className="form-group">
+              <label htmlFor="exampleInputPassword1">Password</label>
+              <input
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+                placeholder="Password"
+              />
+            </div>
+            <div className="form-check">
+              <input
+                type="checkbox"
+                className="form-check-input"
+                id="exampleCheck1"
+              />
+              <label className="form-check-label" htmlFor="exampleCheck1">
+                Check me out
+              </label>
+            </div>
+            <button onClick={onRegister} className="btn btn-primary">
               Submit
-            </Button>
-          </Form>
+            </button>
+          </form>
         </Col>
       </Row>
     </Container>

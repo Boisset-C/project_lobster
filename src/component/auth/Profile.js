@@ -4,20 +4,16 @@ import Col from "react-bootstrap/Col";
 
 function Profile() {
   return (
-    <Container>
+    <Container className="profileContainer">
       <Row>
         <Col>
           <h1>Profile:</h1>
         </Col>
       </Row>
       <Row>
-        <Col>
+        <Col sm={6}>
           <p>Username: Sample</p>
-        </Col>
-        <Col>
           <p>Email: Sample</p>
-        </Col>
-        <Col>
           <p>Question 1:</p>
           <p>Question 2:</p>
           <p>Question 3:</p>
