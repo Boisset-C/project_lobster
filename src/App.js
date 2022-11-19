@@ -1,30 +1,22 @@
-import RegisterForm from "./component/auth/RegisterForm";
-import LoginForm from "./component/auth/LoginForm";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Profile from "./component/auth/Profile";
+import Nav from "./component/nav/Nav";
+import AuthPage from "./pages/AuthPage";
+import Home from "./pages/Home";
+import ShelterReviewPage from "./pages/ShelterReviewPage";
+import UserProfile from "./pages/UserProfile";
 
 function App() {
   return (
-    <Container>
-      <Row>
-        <Col>
-          <LoginForm />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <RegisterForm />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <Profile />
-        </Col>
-      </Row>
-    </Container>
+    <BrowserRouter>
+      <Nav></Nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="auth" element={<AuthPage />} />
+        <Route path="review" element={<ShelterReviewPage />} />
+        <Route path="profile" element={<UserProfile />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
