@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useState } from "react";
+import { supabase } from "../../config/supabaseClient";
 
 function RegisterForm() {
   const [email, setEmail] = useState("");
@@ -10,8 +11,13 @@ function RegisterForm() {
   const onRegister = async (event) => {
     event.preventDefault(); // Prevent default submission
     try {
-      console.log(email);
-      console.log(password);
+      const { data, error } = await supabase.auth.signUp({
+        email: email,
+        password: password,
+        email_confirm: false,
+      });
+      console.log(data);
+      console.log(error);
     } catch (e) {
       alert(`Registration failed! ${e.message}`);
     }
@@ -34,9 +40,6 @@ function RegisterForm() {
                 type="email"
                 placeholder="Enter email"
               />
-              <small id="emailHelp">
-                We'll never share your email with anyone else.
-              </small>
             </div>
             <div>
               <label htmlFor="exampleInputPassword1">Password</label>
