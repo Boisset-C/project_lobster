@@ -25,20 +25,20 @@ function RegisterForm() {
         </Col>
       </Row>
       <Row>
-        <Col sm={8}>
+        <Col>
           <form>
-            <div className="form-group">
+            <div>
               <label>Email address</label>
               <input
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"
                 placeholder="Enter email"
               />
-              <small id="emailHelp" className="form-text text-muted">
+              <small id="emailHelp">
                 We'll never share your email with anyone else.
               </small>
             </div>
-            <div className="form-group">
+            <div>
               <label htmlFor="exampleInputPassword1">Password</label>
               <input
                 onChange={(e) => setPassword(e.target.value)}
@@ -46,19 +46,7 @@ function RegisterForm() {
                 placeholder="Password"
               />
             </div>
-            <div className="form-check">
-              <input
-                type="checkbox"
-                className="form-check-input"
-                id="exampleCheck1"
-              />
-              <label className="form-check-label" htmlFor="exampleCheck1">
-                Check me out
-              </label>
-            </div>
-            <button onClick={onRegister} className="btn btn-primary">
-              Submit
-            </button>
+            <button onClick={onRegister}>Submit</button>
           </form>
         </Col>
       </Row>
