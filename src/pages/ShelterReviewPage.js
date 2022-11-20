@@ -8,7 +8,7 @@ function ShelterReviewPage() {
       <Row>
         <Col>
           <div>
-            <p>THIS IS AUTH PAGE</p>
+            <p>THIS IS REVIEWS PAGE</p>
           </div>
         </Col>
       </Row>
