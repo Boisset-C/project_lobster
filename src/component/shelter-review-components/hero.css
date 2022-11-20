@@ -1,0 +1,18 @@
+.heroBgImage {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+}
+
+.container-fluid {
+  --bs-gutter-x: 0;
+}
+
+.heroTitle {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 98.52%;
+
+  color: #ffffff;
+}

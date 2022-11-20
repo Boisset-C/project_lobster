@@ -1,0 +1,10 @@
+/* Nav Styles */
+
+.navigationBar {
+  background-color: #fff !important;
+}
+
+.navLink {
+  color: #2f1e1e;
+  text-decoration: none;
+}

@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Nav from "./component/nav/Nav";
+import NavigationBar from "./component/nav/NavigationBar";
 import AuthPage from "./pages/AuthPage";
 import Home from "./pages/Home";
 import ShelterReviewPage from "./pages/ShelterReviewPage";
@@ -9,7 +9,7 @@ import UserProfile from "./pages/UserProfile";
 function App() {
   return (
     <BrowserRouter>
-      <Nav></Nav>
+      <NavigationBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="auth" element={<AuthPage />} />
