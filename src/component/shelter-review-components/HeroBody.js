@@ -6,7 +6,7 @@ function HeroBody() {
   return (
     <Container>
       <Row>
-        <Col className={"text-center"} sm={6}>
+        <Col className={"text-center my-5"} sm={6}>
           <img
             style={{ height: "300px" }}
             src={require("../../assets/iphone-display-one.png")}
@@ -23,7 +23,7 @@ function HeroBody() {
         </Col>
       </Row>
       <Row style={{ flexDirection: "row-reverse" }}>
-        <Col className={"text-center"} sm={4}>
+        <Col className={"text-center my-5"} sm={4}>
           <img
             style={{ height: "300px" }}
             className={"img-fluid"}
