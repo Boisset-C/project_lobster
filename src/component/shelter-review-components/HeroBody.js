@@ -40,6 +40,9 @@ function HeroBody() {
           </p>
         </Col>
       </Row>
+      <Row>
+        <Col style={{ backgroundColor: "#161616", height: "100px" }}></Col>
+      </Row>
     </Container>
   );
 }
