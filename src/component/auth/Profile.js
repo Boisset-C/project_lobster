@@ -35,7 +35,7 @@ function Profile() {
       </Row>
       <Row>
         <Col sm={6}>
-          <p>Email: {user.email}</p>
+          <p>Email:</p>
           <p>Question 1:</p>
           <p>Question 2:</p>
           <p>Question 3:</p>
