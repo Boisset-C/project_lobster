@@ -29,15 +29,16 @@ function Hero() {
       >
         <Row className="mx-5">
           <Col sm={4} className="my-1">
-            <Button style={{ width: "100%" }}>Share Now</Button>
+            <Button style={{ width: "100%" }}>Find homeless shelters</Button>
           </Col>
         </Row>
         <Row className="mx-5">
           <Col sm={4}>
             <input
+              className="searchInput"
               style={{ width: "100%" }}
               placeholder="Enter your zip code"
-            ></input>
+            />
           </Col>
         </Row>
         <Row className="mx-5 my-3">

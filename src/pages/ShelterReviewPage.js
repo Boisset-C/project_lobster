@@ -7,9 +7,7 @@ function ShelterReviewPage() {
     <Container>
       <Row>
         <Col>
-          <div>
-            <p>THIS IS REVIEWS PAGE</p>
-          </div>
+          <input placeholder="search" />
         </Col>
       </Row>
     </Container>

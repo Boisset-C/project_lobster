@@ -13,7 +13,7 @@ function HeroBody() {
             alt="app-demo"
           />
         </Col>
-        <Col sm={4}>
+        <Col className="my-5" sm={4}>
           <h2>Make your voice be heard.</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur. Diam nullam pulvinar eget
@@ -23,7 +23,7 @@ function HeroBody() {
         </Col>
       </Row>
       <Row style={{ flexDirection: "row-reverse" }}>
-        <Col className={"text-center my-5"} sm={4}>
+        <Col className="text-center my-5" sm={4}>
           <img
             style={{ height: "300px" }}
             className={"img-fluid"}
@@ -31,7 +31,7 @@ function HeroBody() {
             alt="app-demo"
           />
         </Col>
-        <Col sm={6}>
+        <Col className="my-5" sm={6}>
           <h2>Make your voice be heard.</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur. Diam nullam pulvinar eget

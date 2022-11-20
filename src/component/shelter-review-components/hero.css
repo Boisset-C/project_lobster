@@ -16,3 +16,10 @@
 
   color: #ffffff;
 }
+
+.searchInput {
+  background-image: url("../../assets/magnifyingGlass.svg");
+  background-repeat: no-repeat;
+  padding-left: 20px;
+  background-position: 3px;
+}
