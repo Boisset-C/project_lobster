@@ -3,35 +3,28 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useState } from "react";
 import { supabase } from "../../config/supabaseClient";
+import { useNavigate } from "react-router";
 
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
-  const onSignin = async (event) => {
-    const sessionHandler = async () => {
-      const { data, error } = await supabase.auth.getSession();
-      setUser(data.user);
-      console.log(error);
-    };
-
-    event.preventDefault(); // Prevent default submission
+  const onSignin = async () => {
     try {
       const { data, error } = await supabase.auth.signInWithPassword({
         email: email,
         password: password,
       });
 
-      sessionHandler();
-      console.log(data.user);
+      console.log(data);
       console.log(error);
+      navigate("/profile");
     } catch (e) {
-      alert(`Registration failed! ${e.message}`);
+      alert(`Sign in failed! ${e.message}`);
     }
   };
 
-  console.log("***", user);
   return (
     <Container>
       <Row>
@@ -41,7 +34,7 @@ function LoginForm() {
       </Row>
       <Row>
         <Col>
-          <form>
+          <form onSubmit={(e) => e.preventDefault()}>
             <div>
               <label>Email address</label>
               <input
@@ -58,7 +51,7 @@ function LoginForm() {
                 placeholder="Password"
               />
             </div>
-            <button onClick={onSignin}>Submit</button>
+            <button onClick={(e) => onSignin()}>Submit</button>
           </form>
         </Col>
       </Row>
